@@ -1,26 +1,4 @@
-#include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
-
+/*
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
@@ -40,8 +18,8 @@ int main() {
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
-}
-/*
+}*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -50,7 +28,7 @@ int main() {
 int main(){
 
     int comparacao, escolha,escolha1, escolha2, escolha3, escolha4, carta, cartaadv;
-    int resultado1, resultado, CP, CA, CPIB, CPT, CDP, CPP, CSP;
+    int resultado1, resultado, resultado2, resultado3, CP, CA, CPIB, CPT, CDP, CPP, CSP;
     int populaca, populacao, populacao1=12396372,populacao2=6748000,populacao3=2530701,populacao4=2899000, populacao5=3094325, populacao6=1956000,populacao7=2686612,populacao8=1653461;
     int area, areac, area1=1521, area2=1255,area3=331,area4=714,area5=5802,area6=432,area7=314,area8=218;
     int PT,PTC,PT1=50,PT2=40,PT3=20,PT4=35,PT5=15,PT6= 25,PT7=30,PT8=30;
@@ -164,8 +142,9 @@ int main(){
     printf("5 Densidade :\n");
     printf("6 PIB per capita :\n");
     printf("7 Super poder :\n\n");
+    printf("Escolha o primeiro atributo\n");
     scanf("%d", &escolha);
-    printf("Escolah o segundo atributo\n");
+    printf("Escolha o segundo atributo\n");
     scanf("%d", &escolha1);
 
   if (escolha1 == escolha)
@@ -173,44 +152,45 @@ int main(){
    printf("Voce escolheu o mesmo atributo\n");
    printf("Escolha um atributo diferente\n");
    printf("Escolha outro atributo\n");
-   scanf("%d", escolha2);    
-  }else if ((escolha = 1)||(escolha1=1)||(escolha2=1))
-  {resultado = populacao>populaca ? 1 :0 ;
-   printf("Voce escolheu populcao! ");
-  } else if ((escolha = 2)||(escolha1=2)||(escolha2=2))
-  {resultado = area>areac ? 1 :0 ;
-   printf("Voce escolheu area! ");
-  }else if ((escolha = 3)||(escolha1=3)||(escolha2=3))
-  {resultado = PIB>PIBC ? 1 :0 ;
-   printf("Voce escolheu PIB! ");
-  }else if ((escolha = 4)||(escolha1=4)||(escolha2=4))
-  {resultado = PT>PTC ? 1 :0 ;
-   printf("Voce escolheu pontos turisticos! ");
-  }else if((escolha = 5)||(escolha1=5)||(escolha2=5))
-  {resultado = densidade1<densidade2 ? 1 :0 ;
-   printf("Voce escolheu densidade!");
-  }else if ((escolha = 6)||(escolha1=6)||(escolha2=6))
-  {resultado = PP1>PP2 ? 1 :0 ;
-   printf("Voce escolheu PIB per capita! ");
-  }else if ((escolha = 7)||(escolha1=7)||(escolha2=7))
-  {resultado = SP1>SP2 ? 1 :0 ;
-   printf("Voce escolheu SUPER PODER! ");
+   scanf("%d", escolha2);     
   }else {
    printf("Escolha uma opcao valida!");
    }
   
-  
-    
-  if (escolha && escolha1)
+  if (escolha == 1 ){resultado = populacao>populaca ? 1 :0;printf("Voce escolheu populacao e");
+  } else if (escolha == 2 ){resultado = area>areac ? 1 :0 ;printf("Voce escolheu area e");
+  } else if(escolha == 3 ){resultado = PIB>PIBC ? 1 :0 ;printf("Voce escolheu PIB e");
+  } else if(escolha == 4 ){resultado = PT>PTC ? 1 :0 ;printf("Voce escolheu pontos turisticos e");
+  } else if(escolha == 5 ){resultado = densidade1<densidade2 ? 1 :0 ; printf("Voce escolheu densidade e");
+  } else if(escolha == 6 ){resultado = PP1>PP2 ? 1 :0 ; printf("Voce escolheu PIB per capita e");
+  } else if(escolha ==7){resultado = SP1>SP2 ? 1 :0 ; printf("Voce escolheu SUPER PODER e");}
+ 
+   if ((escolha1 == 1 )||(escolha2==1)){resultado1 = populacao>populaca ? 1 :0; printf(" populacao.\n");
+  } else if ((escolha1 == 2 )||(escolha2==1)){resultado1 = area>areac ? 1 :0 ;printf(" area.\n");
+  } else if((escolha1 == 3 )||(escolha2==1)){resultado1 = PIB>PIBC ? 1 :0 ;printf(" PIB.\n");
+  } else if((escolha1 == 4 )||(escolha2==1)){resultado1 = PT>PTC ? 1 :0 ;printf(" pontos turisticos.\n");
+  } else if((escolha1 == 5 )||(escolha2==1)){resultado1 = densidade1<densidade2 ? 1 :0 ;printf(" densidade.\n");
+  } else if((escolha1 == 6 )||(escolha2==1)){resultado1 = PP1>PP2 ? 1 :0 ;printf(" PIB per capita.\n");
+  } else if((escolha1 == 7 )||(escolha2==1)){resultado1 = SP1>SP2 ? 1 :0 ;printf(" SUPER PODER.\n");}
+
+      printf(" ______________________             ______________________ \n");
+      printf("|Cidade :%s      |          |Cidade :%s     |\n", str,strc);
+      printf("|População: %d    |          |População: %d    |\n", populacao,populaca);
+      printf("|Área: %d km²         |          |Área: %d km²         |\n",area, areac);
+      printf("|PIB (R$): %d bilhões  |          |PIB (R$): %d bilhões  |\n",PIB, PIBC);
+      printf("|Pontos turísticos: %d  |          |Pontos turísticos: %d |\n", PT, PTC); 
+      printf("|______________________ |          |______________________| \n\n"); 
+
+  if (resultado && resultado1)
   {
-    printf("ganhou");
+    printf("Parabens, voce ganhou!!!");
     break;
-  }else if ( escolha != escolha1)
+  }else if ( resultado != resultado1)
   {
     printf("empatou"); 
     break;
   }else{
-    printf("perdeu");
+    printf("Infelizmente, voce perdeu");
   break;}
 
 
@@ -225,56 +205,51 @@ int main(){
     printf("5 Densidade :\n");
     printf("6 PIB per capita :\n");
     printf("7 Super poder :\n\n");
+    printf("Escolah o primeiro atributo\n");
     scanf("%d", &escolha);
     printf("Escolah o segundo atributo\n");
     scanf("%d", &escolha1);
     printf("Escolah o segundo atributo\n");
     scanf("%d", &escolha3);
-
-
-  if (escolha1 == escolha)
-  {
-   printf("Voce escolheu o mesmo atributo\n");
-   printf("Escolha um atributo diferente\n");
-   printf("Escolha outro atributo\n");
-   scanf("%d", escolha2);    
-  }else if ((escolha = 1)||(escolha1=1)||(escolha2=1)||(escolha3=1))
-  {resultado = populacao>populaca ? 1 :0 ;
-   printf("Voce escolheu populcao! ");
-  } else if ((escolha = 2)||(escolha1=2)||(escolha2=2))
-  {resultado = area>areac ? 1 :0 ;
-   printf("Voce escolheu area! ");
-  }else if ((escolha = 3)||(escolha1=3)||(escolha2=3))
-  {resultado = PIB>PIBC ? 1 :0 ;
-   printf("Voce escolheu PIB! ");
-  }else if ((escolha = 4)||(escolha1=4)||(escolha2=4))
-  {resultado = PT>PTC ? 1 :0 ;
-   printf("Voce escolheu pontos turisticos! ");
-  }else if((escolha = 5)||(escolha1=5)||(escolha2=5))
-  {resultado = densidade1<densidade2 ? 1 :0 ;
-   printf("Voce escolheu densidade!");
-  }else if ((escolha = 6)||(escolha1=6)||(escolha2=6))
-  {resultado = PP1>PP2 ? 1 :0 ;
-   printf("Voce escolheu PIB per capita! ");
-  }else if ((escolha = 7)||(escolha1=7)||(escolha2=7))
-  {resultado = SP1>SP2 ? 1 :0 ;
-   printf("Voce escolheu SUPER PODER! ");
-  }else {
-   printf("Escolha uma opcao valida!");
-   }
   
-  
+ if (escolha == 1 ){resultado = populacao>populaca ? 1 :0;printf("Voce escolheu populacao,");
+  } else if (escolha == 2 ){resultado = area>areac ? 1 :0 ;printf("Voce escolheu area,");
+  } else if(escolha == 3 ){resultado = PIB>PIBC ? 1 :0 ;printf("Voce escolheu PIB,");
+  } else if(escolha == 4 ){resultado = PT>PTC ? 1 :0 ;printf("Voce escolheu pontos turisticos,");
+  } else if(escolha == 5 ){resultado = densidade1<densidade2 ? 1 :0 ; printf("Voce escolheu densidade,");
+  } else if(escolha == 6 ){resultado = PP1>PP2 ? 1 :0 ; printf("Voce escolheu PIB per capita,");
+  } else if(escolha ==7){resultado = SP1>SP2 ? 1 :0 ; printf("Voce escolheu SUPER PODER,");}
+ 
+   if (escolha1 == 1 ){resultado1 = populacao>populaca ? 1 :0; printf(" populacao e");
+  } else if(escolha1 == 2){resultado1 = area>areac ? 1 :0 ;printf(" area e");
+  } else if(escolha1 == 3 ){resultado1 = PIB>PIBC ? 1 :0 ;printf(" PIB e");
+  } else if(escolha1 == 4 ){resultado1 = PT>PTC ? 1 :0 ;printf(" pontos turisticos e");
+  } else if(escolha1 == 5 ){resultado1 = densidade1<densidade2 ? 1 :0 ;printf(" densidade e");
+  } else if(escolha1 == 6 ){resultado1 = PP1>PP2 ? 1 :0 ;printf(" PIB per capita e");
+  } else if(escolha1 == 7 ){resultado1 = SP1>SP2 ? 1 :0 ;printf(" SUPER PODER e");}
+ 
+  if (escolha3 == 1 ){resultado2 = populacao>populaca ? 1 :0;printf(" populacao.\n");
+  } else if (escolha3 == 2 ){resultado2 = area>areac ? 1 :0 ;printf(" area.\n");
+  } else if(escolha3 == 3 ){resultado2 = PIB>PIBC ? 1 :0 ;printf(" PIB.\n");
+  } else if(escolha3 == 4 ){resultado2 = PT>PTC ? 1 :0 ;printf(" pontos turisticos.\n");
+  } else if(escolha3 == 5 ){resultado2 = densidade1<densidade2 ? 1 :0 ; printf(" densidade.\n");
+  } else if(escolha3 == 6 ){resultado2 = PP1>PP2 ? 1 :0 ; printf(" PIB per capita.\n");
+  } else if(escolha3 ==7){resultado2 = SP1>SP2 ? 1 :0 ; printf(" SUPER PODER.\n");}
     
-  if ((escolha && escolha1)||(escolha && escolha1)||(escolha1 && escolha3))
+      printf(" ______________________             ______________________ \n");
+      printf("|Cidade :%s      |          |Cidade :%s     |\n", str,strc);
+      printf("|População: %d    |          |População: %d    |\n", populacao,populaca);
+      printf("|Área: %d km²         |          |Área: %d km²         |\n",area, areac);
+      printf("|PIB (R$): %d bilhões  |          |PIB (R$): %d bilhões  |\n",PIB, PIBC);
+      printf("|Pontos turísticos: %d  |          |Pontos turísticos: %d |\n", PT, PTC); 
+      printf("|______________________ |          |______________________| \n\n"); 
+
+  if ((resultado && resultado1)||(resultado && resultado2)||(resultado1 && resultado2))
   {
-    printf("ganhou");
-    break;
-  }else if ( escolha != escolha1)
-  {
-    printf("empatou"); 
+    printf("Parabens, voce ganhou!!!");
     break;
   }else{
-    printf("perdeu");
+    printf("Infelizmente, voce perdeu");
   break;}
 
 
@@ -288,6 +263,7 @@ int main(){
     printf("5 Densidade :\n");
     printf("6 PIB per capita :\n");
     printf("7 Super poder :\n\n");
+    printf("Escolah o primeiro atributo\n");
     scanf("%d", &escolha);
     printf("Escolah o segundo atributo\n");
     scanf("%d", &escolha1);
@@ -296,49 +272,57 @@ int main(){
     printf("Escolah o segundo atributo\n");
     scanf("%d", &escolha4);
 
-  if (escolha1 == escolha)
-  {
-   printf("Voce escolheu o mesmo atributo\n");
-   printf("Escolha um atributo diferente\n");
-   printf("Escolha outro atributo\n");
-   scanf("%d", escolha2);    
-  }else if ((escolha = 1)||(escolha1=1)||(escolha2=1)||(escolha3=1)||(escolha4=1))
-  {resultado = populacao>populaca ? 1 :0 ;
-   printf("Voce escolheu populcao! ");
-  } else if ((escolha = 2)||(escolha1=2)||(escolha2=2))
-  {resultado = area>areac ? 1 :0 ;
-   printf("Voce escolheu area! ");
-  }else if ((escolha = 3)||(escolha1=3)||(escolha2=3))
-  {resultado = PIB>PIBC ? 1 :0 ;
-   printf("Voce escolheu PIB! ");
-  }else if ((escolha = 4)||(escolha1=4)||(escolha2=4))
-  {resultado = PT>PTC ? 1 :0 ;
-   printf("Voce escolheu pontos turisticos! ");
-  }else if((escolha = 5)||(escolha1=5)||(escolha2=5))
-  {resultado = densidade1<densidade2 ? 1 :0 ;
-   printf("Voce escolheu densidade!");
-  }else if ((escolha = 6)||(escolha1=6)||(escolha2=6))
-  {resultado = PP1>PP2 ? 1 :0 ;
-   printf("Voce escolheu PIB per capita! ");
-  }else if ((escolha = 7)||(escolha1=7)||(escolha2=7))
-  {resultado = SP1>SP2 ? 1 :0 ;
-   printf("Voce escolheu SUPER PODER! ");
-  }else {
-   printf("Escolha uma opcao valida!");
-   }
+   if (escolha == 1 ){resultado = populacao>populaca ? 1 :0;printf("Voce escolheu populacao,");
+  } else if (escolha == 2 ){resultado = area>areac ? 1 :0 ;printf("Voce escolheu area,");
+  } else if(escolha == 3 ){resultado = PIB>PIBC ? 1 :0 ;printf("Voce escolheu PIB,");
+  } else if(escolha == 4 ){resultado = PT>PTC ? 1 :0 ;printf("Voce escolheu pontos turisticos,");
+  } else if(escolha == 5 ){resultado = densidade1<densidade2 ? 1 :0 ; printf("Voce escolheu densidade,");
+  } else if(escolha == 6 ){resultado = PP1>PP2 ? 1 :0 ; printf("Voce escolheu PIB per capita,");
+  } else if(escolha ==7){resultado = SP1>SP2 ? 1 :0 ; printf("Voce escolheu SUPER PODER,");}
+ 
+   if (escolha1 == 1 ){resultado1 = populacao>populaca ? 1 :0; printf(" populacao,");
+  } else if(escolha1 == 2){resultado1 = area>areac ? 1 :0 ;printf(" area,");
+  } else if(escolha1 == 3 ){resultado1 = PIB>PIBC ? 1 :0 ;printf(" PIB,");
+  } else if(escolha1 == 4 ){resultado1 = PT>PTC ? 1 :0 ;printf(" pontos turisticos,");
+  } else if(escolha1 == 5 ){resultado1 = densidade1<densidade2 ? 1 :0 ;printf(" densidade,");
+  } else if(escolha1 == 6 ){resultado1 = PP1>PP2 ? 1 :0 ;printf(" PIB per capita,");
+  } else if(escolha1 == 7 ){resultado1 = SP1>SP2 ? 1 :0 ;printf(" SUPER PODER,");}
+ 
+  if (escolha3 == 1 ){resultado2 = populacao>populaca ? 1 :0;printf(" populacao e");
+  } else if (escolha3 == 2 ){resultado2 = area>areac ? 1 :0 ;printf(" area e");
+  } else if(escolha3 == 3 ){resultado2 = PIB>PIBC ? 1 :0 ;printf(" PIB e");
+  } else if(escolha3 == 4 ){resultado2 = PT>PTC ? 1 :0 ;printf(" pontos turisticos e");
+  } else if(escolha3 == 5 ){resultado2 = densidade1<densidade2 ? 1 :0 ; printf(" densidade e");
+  } else if(escolha3 == 6 ){resultado2 = PP1>PP2 ? 1 :0 ; printf(" PIB per capita e");
+  } else if(escolha3 ==7){resultado2 = SP1>SP2 ? 1 :0 ; printf(" SUPER PODER e");}
   
-  
+   if (escolha4 == 1 ){resultado3 = populacao>populaca ? 1 :0;printf(" populacao.\n");
+  } else if (escolha4 == 2 ){resultado3 = area>areac ? 1 :0 ;printf(" area.\n");
+  } else if(escolha4 == 3 ){resultado3 = PIB>PIBC ? 1 :0 ;printf(" PIB.\n");
+  } else if(escolha4 == 4 ){resultado3 = PT>PTC ? 1 :0 ;printf(" pontos turisticos.\n");
+  } else if(escolha4 == 5 ){resultado3 = densidade1<densidade2 ? 1 :0 ; printf(" densidade.\n");
+  } else if(escolha4 == 6 ){resultado3 = PP1>PP2 ? 1 :0 ; printf(" PIB per capita.\n");
+  } else if(escolha4 ==7){resultado3 = SP1>SP2 ? 1 :0 ; printf(" SUPER PODER.\n\n");}
     
-  if (escolha && escolha1)
+      printf(" ______________________             ______________________ \n");
+      printf("|Cidade :%s      |          |Cidade :%s     |\n", str,strc);
+      printf("|População: %d    |          |População: %d    |\n", populacao,populaca);
+      printf("|Área: %d km²         |          |Área: %d km²         |\n",area, areac);
+      printf("|PIB (R$): %d bilhões  |          |PIB (R$): %d bilhões  |\n",PIB, PIBC);
+      printf("|Pontos turísticos: %d  |          |Pontos turísticos: %d |\n", PT, PTC); 
+      printf("|______________________ |          |______________________| \n\n"); 
+
+
+  if ((resultado && resultado1 && resultado2)||(resultado1 && resultado2 && resultado3)||(resultado && resultado1 && resultado3))
   {
-    printf("ganhou");
+    printf("Parabens, voce ganhou!!!");
     break;
-  }else if ( escolha != escolha1)
+  }else if (((resultado||resultado1||resultado2||resultado3) && (resultado||resultado1||resultado2||resultado3))!=((resultado||resultado1||resultado2||resultado3) && (resultado||resultado1||resultado2||resultado3)))
   {
     printf("empatou"); 
     break;
   }else{
-    printf("perdeu");
+    printf("Infelizmente, voce perdeu");
    } break;
 
   case 'b': 
@@ -352,5 +336,3 @@ int main(){
  }
 }
 }
-
-*/
